@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <h1 class="text-center">Basic Calculator</h1>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="Index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Calculate It
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="Calculator.html">Basic Calculator</a></li>
+                          <li><a class="dropdown-item" href="bmi-calculator.html">BMI Calculator</a></li>
+                          <li><a class="dropdown-item" href="currency.html">Currency Converter</a></li>
+                        </ul>
+                      </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="To-do-list.html">To-do list</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  <br>
+
+  <div id="Calculator">
+    <div class="box">
+      <h1>Calculate Me!</h1>
+      <div class="calc-display">
+        <input id="display" readonly>
+      </div>
+
+      <div class="calc-container">
+        <div id="keys">
+
+          <Calc-button onclick="appendToDisplay('+')" class="operator-btn">+</Calc-button>
+          <Calc-button onclick="appendToDisplay('7')">7</Calc-button>
+          <Calc-button onclick="appendToDisplay('8')">8</Calc-button>
+          <Calc-button onclick="appendToDisplay('9')">9</Calc-button>
+          <Calc-button onclick="appendToDisplay('-')" class="operator-btn">-</Calc-button>
+          <Calc-button onclick="appendToDisplay('4')">4</Calc-button>
+          <Calc-button onclick="appendToDisplay('5')">5</Calc-button>
+          <Calc-button onclick="appendToDisplay('6')">6</Calc-button>
+          <Calc-button onclick="appendToDisplay('*')" class="operator-btn">*</Calc-button>
+          <Calc-button onclick="appendToDisplay('1')">1</Calc-button>
+          <Calc-button onclick="appendToDisplay('2')">2</Calc-button>
+          <Calc-button onclick="appendToDisplay('3')">3</Calc-button>
+          <Calc-button onclick="appendToDisplay('/')" class="operator-btn">/</Calc-button>
+          <Calc-button onclick="appendToDisplay('0')">0</Calc-button>
+          <Calc-button onclick="appendToDisplay('.')">.</Calc-button>
+          <Calc-button onclick="Calculate()">=</Calc-button>
+          <Calc-button onclick="clearDisplay()" class="operator-btn">C</Calc-button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

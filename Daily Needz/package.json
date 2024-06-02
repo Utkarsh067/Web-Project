@@ -1,0 +1,8 @@
+{
+    "name": "Daily Needz",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "express --static ./" 
+    }
+  }
+  

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bmi.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>BMI Calculator</title>
+</head>
+
+<body>
+  <h1 class="text-center"> BMI Calculator</h1>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Calculate It
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Calculator.html">Basic Calculator</a></li>
+              <li><a class="dropdown-item" href="bmi-calculator.html">BMI Calculator</a></li>
+              <li><a class="dropdown-item" href="currency.html">Currency Converter</a></li>
+            </ul>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="To-do-list.html">To-do list</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="container">
+    <div class="box">
+      <h1>Find Your Body Mass Index</h1>
+      <div class="content">
+
+
+        <div class="input">
+          <label for="height">Age</label>
+          <input type="text" class="text-input" id="age" autocomplete="off" required />
+        </div>
+
+        <div class="gender">
+
+          <label class="container">
+            <input type="radio" name="radio" id="m">
+            <p class="text">Male</p>
+            <span class="checkmark"></span>
+          </label>
+
+
+          <label class="container">
+            <input type="radio" name="radio" id="f">
+            <p class="text">Female</p>
+            <span class="checkmark"></span>
+          </label>
+
+        </div>
+
+        <div class="containerHW">
+          <div class="inputH">
+            <label for="height">Height(cm)</label>
+            <input type="number" id="height" required>
+          </div>
+
+          <div class="inputW">
+            <label for="weight">Weight(kg)</label>
+            <input type="number" id="weight" required>
+          </div>
+        </div>
+
+        <button class="calculate" id="submit" onclick="calculate();">Calculate BMI</button>
+      </div>
+      <div class="result">
+        <p>Your BMI is</p>
+        <div id="result">00.00</div>
+        <p class="comment"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="bmi.js"></script>
+
+</body>
+
+</html>
