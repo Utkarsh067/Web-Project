@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Implementing CI/CD using Actions
 
 on:
   push:
@@ -6,15 +6,18 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v1
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # The directory to deploy, which is the root in this case
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Deploy static site to S3 bucket
+      run: aws s3 sync . s3://tws-portfolio --delete
