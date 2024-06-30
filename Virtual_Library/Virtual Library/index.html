@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Online Boot Store Website Design Tutorial</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+    <div class="header-1">
+        <a href="#" class="logo"> <i class="fas fa-book"></i> Book Store </a>
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="icons">
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <div id="login-btn" class="fas fa-user"></div>
+        </div>
+    </div>
+    <div class="header-2">
+        <nav class="navbar">
+            <a target="blank" href="index.html" href="#home">Home</a>
+        </nav>
+    </div>
+</header>
+
+<nav class="bottom-navbar">
+    <a href="#home" class="fas fa-home"></a>
+</nav>
+
+<div class="login-form-container">
+    <div id="close-login-btn" class="fas fa-times"></div>
+    <form action="">
+        <h3>Sign In</h3>
+        <span>Username</span>
+        <input type="email" name="" class="box" placeholder="Enter your email" id="">
+        <span>Password</span>
+        <input type="password" name="" class="box" placeholder="Enter your password" id="">
+        <div class="checkbox">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me"> Remember me</label>
+        </div>
+        <input type="submit" value="Sign In" class="btn">
+        <p>Forget password? <a href="#">Click here</a></p>
+        <p>Don't have an account? <a href="#">Create one</a></p>
+    </form>
+</div>
+
+<section class="home" id="home">
+    <div class="row">
+        <div class="content">
+            <h3>Virtual Library</h3>
+            <p>Discover a world of knowledge at your fingertips.</p>
+        </div>
+    </div>
+</section>
+
+<section class="featured" id="featured">
+    <h1 class="heading"> <span>Books</span> </h1>
+    <div class="swiper featured-slider">
+        <div class="swiper-wrapper" id="book-list">
+            <!-- Books will be dynamically inserted here by JavaScript -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+    </div>
+    <div class="credit"> Created by <span>Utkarsh Jain</span> | All rights reserved! </div>
+</section>
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="js/Ebooks.js"></script>
+
+</body>
+</html>
